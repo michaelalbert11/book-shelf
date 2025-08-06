@@ -46,4 +46,6 @@ production build
 - delete and replace `index.html`,`thumbnail.jpg`,`assets` with new build / dist folder's `index.html`,`thumbnail.jpg` and `assets`
 - rename the book pdf to `book_pdf_(no_of_books).pdf` example `book_pdf_19.pdf`
 - upload the book in inside `pdf` folder
-  note: do not delete the `pdf` folder
+- `note`: do not delete the `pdf` folder
+
+reload to see change in browser `cmd + shift + r` or `ctrl + shift + r`
