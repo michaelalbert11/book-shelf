@@ -30,7 +30,7 @@ import eye_icon from "../../assets/svg/eye.svg";
 import comment_icon from "../../assets/svg/comment.svg";
 import like_icon from "../../assets/svg/like.svg";
 function Home() {
-  const images = [
+  const data = [
     {
       title: "Why this book shelf ?",
       description: `During the Summer of 2024, Holy Spirit asked
@@ -210,6 +210,7 @@ resurrection of Jesus.`,
       pdf: "./pdf/book_pdf_12.pdf",
     },
   ];
+
   const [modal, setModal] = useState(false);
 
   const closeModal = useCallback(() => {
@@ -226,7 +227,7 @@ resurrection of Jesus.`,
   const view = parseInt(params.get("view"));
   useEffect(() => {
     if (id !== null && view !== null) {
-      setModal(images[id]);
+      setModal(data[id]);
     }
   }, [id, view]);
 
@@ -290,7 +291,7 @@ resurrection of Jesus.`,
       <div className="book_shelf">
         <h1>MY BOOK SHELF</h1>
         <div className="book_shelf_container">
-          {images.map((itm, i) => {
+          {data.map((itm, i) => {
             return (
               <BookItem
                 key={i + itm.title}
